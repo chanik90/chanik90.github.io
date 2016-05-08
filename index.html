@@ -1,1 +1,52 @@
-School Recommendation
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Your Favorite School </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style2.css">
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="javascript/university.js"> </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGusn-xyieroH6nUfl4r-401v1ChxBtbk&libraries=places"> </script>
+    </head>
+
+    <body>
+        <div class="container-fluid heading">
+            <h2 class="title"> University Choices </h2>
+        </div>
+        <div class = "inputs col-lg-6 container">
+            <h3>Complete the form below to get your university recommendations!</h3>
+            <form name = "myform">
+                <p>Email Address: <input id="email_add" type="text" size="30" class ="diffchoice email_address"><br> </p>
+                <p> Size:
+                  <select id="size" class="diffchoice">
+                    <option value = "" selected> Choose a size of school </option>
+                    <option value = "5000"> Small (Less than 5,000) </option>
+                    <option value = "15000"> Medium (5,000 - 15,000) </option>
+                    <option value = "100000"> Large (More than 15,000) </option>
+                  </select>
+                </p>
+                <p>Annual Tuition Limit: <input type="text" id="tuition_limit" name="tuition"><br>
+                </p>
+                <div id="type_of_school">
+                    <p>Type of School:
+                        <input type="radio" id="public" name="rate" value="public">Public
+                        <input type="radio" id="private" name="rate" value="private">Private
+                    </p>
+                </div>
+                <p>
+                    Enter your GPA (Rounded to two decimals): <input id='GPA' type ='text' size= '4' maxlength='4' class='GPACheck'>
+                    </label>
+                </p>
+                <p> 
+                    <input type="button" id="submit" value = "Submit">&nbsp;<input type="reset">
+                </p>
+            </form>
+            <p> After submitting all your information correctly, we will contact you with recommended universities via email. Thank you. </p>
+        </div>
+        <div class = "container col-lg-6 outputs">
+            <h3>Your University Recommendations</h3>
+            <div id="googleMap" style="width:500px;height:380px;"></div>
+        </div>
+    </body>
+</html>
